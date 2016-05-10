@@ -1,3 +1,7 @@
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Created by Scott on 5/10/16.
  */
@@ -30,4 +34,5 @@ public class Person {
                 ", ipAddress='" + ipAddress + '\'' +
                 '}';
     }
+
 }
