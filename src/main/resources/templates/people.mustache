@@ -1,5 +1,13 @@
 <html>
 <body>
-
+<form>
+    <ol>
+    {{#people}}
+        <li>
+            <a href="/?offset={{id}}">{{.}}</a>
+        </li>
+    {{/people}}
+    <ol>
+</form>
 </body>
 </html>

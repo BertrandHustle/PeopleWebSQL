@@ -25,7 +25,9 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        //todo clean up toString method
+
+        return
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
