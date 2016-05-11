@@ -75,7 +75,8 @@ public class PeopleWeb {
                     int ID = Integer.parseInt(request.queryParams("id"));
 
                     //put details of person in hash
-                    Person selectedPerson = people.get(ID);
+                    //subtracts 1 to compensate for skipped first line in csv
+                    Person selectedPerson = people.get(ID - 1);
 
                     String firstName = selectedPerson.getFirstName();
                     String lastName = selectedPerson.getLastName();
