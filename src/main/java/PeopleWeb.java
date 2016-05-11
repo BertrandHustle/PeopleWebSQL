@@ -6,13 +6,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class PeopleWeb {
 
     public static void main(String[] args) throws IOException{
-
-        //todo make this separate method
 
         //init to read file
         File file = new File("people.csv");
@@ -29,7 +28,34 @@ public class PeopleWeb {
                 (request, response) -> {
 
                     HashMap hash = new HashMap<>();
-                    hash.put("people", people);
+
+                    //init to keep track of offset
+                    int offset = 0;
+
+                    try {
+                        String pageOffset = request.queryParams("offset");
+                        offset = Integer.parseInt(pageOffset);
+                    } catch (NumberFormatException nfe){
+                        offset = 0;
+                    }
+
+                    int backOffset = 0;
+
+                    if (offset != 0) {
+                        backOffset = offset - 20;
+                        hash.put("backOffset", backOffset);
+                    }
+
+                    Integer nextOffSet = null;
+
+                    if (offset < people.size() - 20){
+                        nextOffSet = offset + 20;
+                        hash.put("nextOffset", nextOffSet);
+                    }
+
+                    List peopleList = people.subList(offset, offset + 20);
+                    hash.put("people", peopleList);
+
                     return new ModelAndView(hash, "people.mustache");
                 },
 
@@ -43,13 +69,35 @@ public class PeopleWeb {
                 "/person",
                 (request, response) -> {
 
-                    response.redirect("/");
+                    HashMap hash = new HashMap<>();
 
-                    return "test";
+                    //get person from ID
+                    int ID = Integer.parseInt(request.queryParams("id"));
 
-                }
+                    //put details of person in hash
+                    Person selectedPerson = people.get(ID);
+
+                    String firstName = selectedPerson.getFirstName();
+                    String lastName = selectedPerson.getLastName();
+                    String email = selectedPerson.getEmail();
+                    String country = selectedPerson.getCountry();
+                    String ipAddress = selectedPerson.getIpAddress();
+
+                    hash.put("firstName", firstName);
+                    hash.put("lastName", lastName);
+                    hash.put("email", email);
+                    hash.put("country", country);
+                    hash.put("ipAddress", ipAddress);
+
+                    return new ModelAndView(hash, "single_person.mustache");
+
+                },
+
+                new MustacheTemplateEngine()
 
         );
 
     }
 }
+
+//todo: show person data on "single_person.mustache"

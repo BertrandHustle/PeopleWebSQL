@@ -1,10 +1,4 @@
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Scanner;
 
-/**
- * Created by Scott on 5/10/16.
- */
 public class Person {
 
     int id;
@@ -23,18 +17,33 @@ public class Person {
         this.ipAddress = ipAddress;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
     @Override
     public String toString() {
-        //todo clean up toString method
-
-        return
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", country='" + country + '\'' +
-                ", ipAddress='" + ipAddress + '\'' +
-                '}';
+        return firstName + " " + lastName;
     }
 
 }

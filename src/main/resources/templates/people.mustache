@@ -1,13 +1,23 @@
 <html>
 <body>
-<form>
+
     <ol>
     {{#people}}
-        <li>
-            <a href="/?offset={{id}}">{{.}}</a>
-        </li>
+        <ol>
+            <a href="/person?id={{id}}">{{.}}</a>
+        </ol>
     {{/people}}
     <ol>
-</form>
+
+<!-- if offset isn't zero lists "previous" -->
+    {{#backOffset}}
+        <a href="/?offset={{backOffset}}">back</a>
+    {{/backOffset}}
+
+<!-- if offset isn't the last set of names lists "next" -->
+    {{#nextOffset}}
+        <a href="/?offset={{nextOffset}}">next</a>
+    {{/nextOffset}}
+
 </body>
 </html>
