@@ -46,4 +46,7 @@ public class Person {
         return firstName + " " + lastName;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 }

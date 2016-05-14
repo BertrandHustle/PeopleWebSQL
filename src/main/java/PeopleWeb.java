@@ -1,9 +1,13 @@
+import org.h2.tools.Server;
 import spark.ModelAndView;
 import spark.Spark;
 import spark.template.mustache.MustacheTemplateEngine;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,15 +15,21 @@ import java.util.Scanner;
 
 public class PeopleWeb {
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException, SQLException{
 
-        //init to read file
-        File file = new File("people.csv");
-        Scanner scanner = new Scanner(file);
+        //creates server
+        Server server = Server.createTcpServer("-baseDir", "./data").start();
 
-        //uses PersonBuilder method to scan csv and make arraylist
-        PersonBuilder pb = new PersonBuilder();
-        ArrayList<Person> people = pb.PersonBuilder(scanner);
+        //creates connection
+        String jdbcUrl = "jdbc:h2:" + server.getURL() + "/main";
+        System.out.println(jdbcUrl);
+        Connection connection = DriverManager.getConnection(jdbcUrl, "", null);
+
+        //creates/configures web service
+        Service service =  new Service(connection);
+
+        //init database
+        service.initDatabase();
 
         //GET route for webroot
 
@@ -100,5 +110,3 @@ public class PeopleWeb {
 
     }
 }
-
-//todo: show person data on "single_person.mustache"
