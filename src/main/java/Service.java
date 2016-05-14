@@ -86,5 +86,31 @@ public class Service {
 
     }
 
+    //queries database and returns arraylist of people
+    public ArrayList<Person> selectPeople() throws SQLException{
+        PreparedStatement statement = connection.prepareStatement("SELECT * FROM people");
+        ResultSet resultSet = statement.executeQuery();
+        ArrayList<Person> people = new ArrayList<>();
+
+        while(resultSet.next()){
+
+            Person person = new Person(
+
+                    resultSet.getInt("id"),
+                    resultSet.getString("firstName"),
+                    resultSet.getString("lastName"),
+                    resultSet.getString("email"),
+                    resultSet.getString("country"),
+                    resultSet.getString("ipAddress")
+            );
+
+            people.add(person);
+
+        }
+
+        return people;
+
+    }
+
 
 }

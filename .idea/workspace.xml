@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1edf6b48-92bc-41ed-abf3-7bc163345874" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/PeopleWeb.class" afterPath="$PROJECT_DIR$/target/classes/PeopleWeb.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Person.class" afterPath="$PROJECT_DIR$/target/classes/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/PeopleWeb.java" afterPath="$PROJECT_DIR$/src/main/java/PeopleWeb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Service.java" afterPath="$PROJECT_DIR$/src/main/java/Service.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ServiceTests.java" afterPath="$PROJECT_DIR$/src/test/java/ServiceTests.java" />
     </list>
     <ignored path="PeopleWebRedux.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +53,9 @@
       <file leaf-file-name="PeopleWeb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PeopleWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,17 +75,19 @@
       <file leaf-file-name="Service.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="19" column="139" selection-start-line="19" selection-start-column="139" selection-end-line="19" selection-end-column="139" />
+            <state relative-caret-position="799">
+              <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1463263767000" expanded="true" signature="439:466" placeholder="DROP TABLE I... " />
-                <marker date="1463263767000" expanded="true" signature="497:617" placeholder="CREATE TABLE... people" />
-                <marker date="1463263767000" expanded="true" signature="497:618" placeholder="CREATE TABLE... people" />
-                <marker date="1463263767000" expanded="true" signature="1115:1161" placeholder="INSERT INTO people... " />
-                <marker date="1463263767000" expanded="true" signature="1115:1162" placeholder="INSERT INTO people... " />
-                <marker date="1463263767000" expanded="true" signature="1842:1873" placeholder="SELECT * FRO... people" />
-                <marker date="1463263767000" expanded="true" signature="2643:2690" placeholder="INSERT INTO people... " />
+                <marker date="1463263938000" expanded="true" signature="439:466" placeholder="DROP TABLE I... " />
+                <marker date="1463263938000" expanded="true" signature="497:617" placeholder="CREATE TABLE... people" />
+                <marker date="1463263938000" expanded="true" signature="497:618" placeholder="CREATE TABLE... people" />
+                <marker date="1463263938000" expanded="true" signature="1115:1161" placeholder="INSERT INTO people... " />
+                <marker date="1463263938000" expanded="true" signature="1115:1162" placeholder="INSERT INTO people... " />
+                <marker date="1463263938000" expanded="true" signature="1842:1873" placeholder="SELECT * FRO... people" />
+                <marker date="1463263938000" expanded="true" signature="2643:2690" placeholder="INSERT INTO people... " />
+                <marker date="1463263938000" expanded="true" signature="3137:3151" placeholder="SELECT * FRO... game" />
+                <marker date="1463263938000" expanded="true" signature="3137:3157" placeholder="SELECT * FRO... people" />
               </folding>
             </state>
           </provider>
@@ -99,8 +96,8 @@
       <file leaf-file-name="ServiceTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ServiceTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+            <state relative-caret-position="135">
+              <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,8 +163,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/PeopleWeb.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ServiceTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/Service.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ServiceTests.java" />
       </list>
     </option>
   </component>
@@ -200,8 +197,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="45" />
-    <option name="y" value="23" />
+    <option name="x" value="89" />
+    <option name="y" value="26" />
     <option name="width" value="1224" />
     <option name="height" value="662" />
   </component>
@@ -822,7 +819,7 @@
       <workItem from="1462908087069" duration="8925000" />
       <workItem from="1462971185242" duration="200000" />
       <workItem from="1462982009404" duration="4916000" />
-      <workItem from="1463258308282" duration="4343000" />
+      <workItem from="1463258308282" duration="4875000" />
     </task>
     <servers />
   </component>
@@ -833,11 +830,11 @@
     <history-entry file="ServiceTests - 2016.05.14 at 18h 09m 38s.xml">
       <configuration name="ServiceTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServiceTests_whenInsertPersonSizeOfDatabaseIs1000 - 2016.05.14 at 17h 42m 16s.xml">
-      <configuration name="ServiceTests.whenInsertPersonSizeOfDatabaseIs1000" configurationId="JUnit" />
+    <history-entry file="ServiceTests - 2016.05.14 at 18h 17m 07s.xml">
+      <configuration name="ServiceTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServiceTests_whenInsertPersonSizeOfDatabaseIs1000 - 2016.05.14 at 17h 43m 00s.xml">
-      <configuration name="ServiceTests.whenInsertPersonSizeOfDatabaseIs1000" configurationId="JUnit" />
+    <history-entry file="ServiceTests - 2016.05.14 at 18h 18m 30s.xml">
+      <configuration name="ServiceTests" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ServiceTests_whenInsertPersonSizeOfDatabaseIs1000 - 2016.05.14 at 17h 44m 42s.xml">
       <configuration name="ServiceTests.whenInsertPersonSizeOfDatabaseIs1000" configurationId="JUnit" />
@@ -859,10 +856,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18855000" />
+    <option name="totallyTimeSpent" value="19387000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="23" width="1224" height="662" extended-state="0" />
+    <frame x="89" y="26" width="1224" height="662" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -932,7 +929,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ServiceTests.java</url>
-          <line>46</line>
+          <line>47</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -966,9 +963,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,9 +1005,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,9 +1055,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1157,35 +1148,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PeopleWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="19" column="139" selection-start-line="19" selection-start-column="139" selection-end-line="19" selection-end-column="139" />
+        <state relative-caret-position="799">
+          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1463263767000" expanded="true" signature="439:466" placeholder="DROP TABLE I... " />
-            <marker date="1463263767000" expanded="true" signature="497:617" placeholder="CREATE TABLE... people" />
-            <marker date="1463263767000" expanded="true" signature="497:618" placeholder="CREATE TABLE... people" />
-            <marker date="1463263767000" expanded="true" signature="1115:1161" placeholder="INSERT INTO people... " />
-            <marker date="1463263767000" expanded="true" signature="1115:1162" placeholder="INSERT INTO people... " />
-            <marker date="1463263767000" expanded="true" signature="1842:1873" placeholder="SELECT * FRO... people" />
-            <marker date="1463263767000" expanded="true" signature="2643:2690" placeholder="INSERT INTO people... " />
+            <marker date="1463263938000" expanded="true" signature="439:466" placeholder="DROP TABLE I... " />
+            <marker date="1463263938000" expanded="true" signature="497:617" placeholder="CREATE TABLE... people" />
+            <marker date="1463263938000" expanded="true" signature="497:618" placeholder="CREATE TABLE... people" />
+            <marker date="1463263938000" expanded="true" signature="1115:1161" placeholder="INSERT INTO people... " />
+            <marker date="1463263938000" expanded="true" signature="1115:1162" placeholder="INSERT INTO people... " />
+            <marker date="1463263938000" expanded="true" signature="1842:1873" placeholder="SELECT * FRO... people" />
+            <marker date="1463263938000" expanded="true" signature="2643:2690" placeholder="INSERT INTO people... " />
+            <marker date="1463263938000" expanded="true" signature="3137:3151" placeholder="SELECT * FRO... game" />
+            <marker date="1463263938000" expanded="true" signature="3137:3157" placeholder="SELECT * FRO... people" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ServiceTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        <state relative-caret-position="135">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

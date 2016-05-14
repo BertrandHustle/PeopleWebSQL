@@ -9,6 +9,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class ServiceTests {
 
@@ -36,9 +37,9 @@ public class ServiceTests {
     public void whenInsertPersonReturnsSelection() throws SQLException, IOException {
 
         //arrange
+        service.initDatabase();
 
         //act
-        service.initDatabase();
         service.insertPerson();
         Person testPerson = service.selectPerson(1);
 
@@ -46,6 +47,26 @@ public class ServiceTests {
 
         assertThat(testPerson.getFirstName(), is("Scott"));
 
+    }
+
+    /**
+     * Given a database table of people
+     * When method is executed
+     * Then returns arraylist of Person objects
+     */
+
+    @Test
+    public void whenSelectPeoplethenReturnsPersonArraylist() throws SQLException, IOException {
+
+        //arrange
+        service.initDatabase();
+
+        //act
+        service.populateDatabase();
+        ArrayList<Person> testPeople = service.selectPeople();
+
+        //assert
+        assertThat(testPeople.size(), is(1000));
     }
 
     @After
