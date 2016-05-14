@@ -17,10 +17,10 @@ public class Service {
         Statement statement = connection.createStatement();
 
         statement.execute("DROP TABLE IF EXISTS people");
-        statement.execute("CREATE TABLE people (id IDENTITY, first_name VARCHAR, last_name VARCHAR, email VARCHAR, country VARCHAR, ip VARCHAR");
+        statement.execute("CREATE TABLE people (id IDENTITY, firstName VARCHAR, lastName VARCHAR, email VARCHAR, country VARCHAR, ipAddress VARCHAR)");
     }
 
-    public void insertPerson() throws IOException, SQLException{
+    public void populateDatabase() throws IOException, SQLException{
 
         //init to read file
         File file = new File("people.csv");
@@ -31,7 +31,7 @@ public class Service {
         ArrayList<Person> peopleArray = pb.PersonBuilder(scanner);
 
         for (Person person : peopleArray) {
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO people VALUES (NULL, ?, ?, ?, ?, ?");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO people VALUES (NULL, ?, ?, ?, ?, ?)");
             statement.setString(1, person.getFirstName());
             statement.setString(2, person.getLastName());
             statement.setString(3, person.getEmail());
@@ -51,7 +51,7 @@ public class Service {
     public Person selectPerson (int id) throws SQLException {
 
         PreparedStatement statement = connection.prepareStatement("SELECT * FROM people WHERE id=?");
-        statement.setString(1, id);
+        statement.setInt(1, id);
 
         ResultSet resultSet = statement.executeQuery();
         ArrayList<Person> selectedPerson = new ArrayList<>();
@@ -72,6 +72,17 @@ public class Service {
         }
 
         return selectedPerson.get(0);
+
+    }
+
+    public void insertPerson() throws SQLException{
+        PreparedStatement statement = connection.prepareStatement("INSERT INTO people VALUES (NULL, ?, ?, ?, ?, ?)");
+        statement.setString(1, "Scott");
+        statement.setString(2, "Greenberg");
+        statement.setString(3, "email.com");
+        statement.setString(4, "USA");
+        statement.setString(5, "1.2.3.4");
+        statement.executeUpdate();
 
     }
 

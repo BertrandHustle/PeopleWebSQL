@@ -31,6 +31,15 @@ public class PeopleWeb {
         //init database
         service.initDatabase();
 
+        //this should be its own method
+        //init to read file
+        File file = new File("people.csv");
+        Scanner scanner = new Scanner(file);
+
+        //uses PersonBuilder method to scan csv and make arraylist
+        PersonBuilder pb = new PersonBuilder();
+        ArrayList<Person> people = pb.PersonBuilder(scanner);
+
         //GET route for webroot
 
         Spark.get(
