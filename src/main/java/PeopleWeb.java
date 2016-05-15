@@ -74,7 +74,7 @@ public class PeopleWeb {
                     int size = service.peopleSize();
 
                     //todo: fix this so it works past page 0
-                    if (offset < size){
+                    if (offset < size - 20){
                         nextOffSet = offset + 20;
                         hash.put("nextOffset", nextOffSet);
                     }
