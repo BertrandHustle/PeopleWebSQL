@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="H2 - jdbc:h2:tcp://localhost/main" uuid="8b8dce2c-0be6-43df-b033-36ae2cc4297e">
+    <data-source name="H2 - main@localhost" uuid="874aa668-84ff-49d3-99a6-4fcd322b23cb">
       <secret-storage>master_key</secret-storage>
-      <schema-pattern>MAIN&amp;nbsp;.PUBLIC</schema-pattern>
-      <default-schemas>MAIN&amp;nbsp;.PUBLIC</default-schemas>
+      <schema-pattern>MAIN.PUBLIC</schema-pattern>
+      <default-schemas>MAIN.PUBLIC</default-schemas>
     </data-source>
   </component>
 </project>

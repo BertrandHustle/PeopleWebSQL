@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3416529315">
-    <data-source source="LOCAL" name="H2 - jdbc:h2:tcp://localhost/main" uuid="8b8dce2c-0be6-43df-b033-36ae2cc4297e">
+  <component name="DataSourceManagerImpl" format="xml" hash="1698629187">
+    <data-source source="LOCAL" name="H2 - main@localhost" uuid="874aa668-84ff-49d3-99a6-4fcd322b23cb">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>

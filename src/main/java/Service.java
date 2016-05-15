@@ -87,6 +87,7 @@ public class Service {
     }
 
     //queries database and returns arraylist of people
+
     public ArrayList<Person> selectPeople(int offset) throws SQLException{
         PreparedStatement statement = connection.prepareStatement("SELECT * FROM people LIMIT 20 OFFSET ?");
         statement.setInt(1, offset);
@@ -111,6 +112,14 @@ public class Service {
 
         return people;
 
+    }
+
+    public int peopleSize() throws SQLException{
+
+        PreparedStatement statement = connection.prepareStatement("SELECT COUNT(*) AS total FROM people");
+        ResultSet resultSet = statement.executeQuery();
+        resultSet.next();
+        return resultSet.getInt(1);
     }
 
 

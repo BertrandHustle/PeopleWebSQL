@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="H2 - jdbc:h2:tcp://localhost/main" uuid="8b8dce2c-0be6-43df-b033-36ae2cc4297e">
+  <data-source name="H2 - main@localhost" uuid="874aa668-84ff-49d3-99a6-4fcd322b23cb">
     <database-info product="H2" version="1.3.176 (2014-04-05)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.3.176 (2014-04-05)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
-    <schema name="PUBLIC" catalog="MAIN "/>
+    <schema name="PUBLIC" catalog="MAIN"/>
+    <table name="PEOPLE" schema="PUBLIC" catalog="MAIN" type="TABLE">
+      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="KE5FWFQgVkFMVUUgRk9SIFBVQkxJQy5TWVNURU1fU0VRVUVOQ0VfMTZERDhEMzlfMjY3MF80Mjc4X0EwQzNfNDVGMjEzMkYzN0VCKQ==" autoIncrement="true"/>
+      <column name="FIRSTNAME" sqlType="VARCHAR" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="LASTNAME" sqlType="VARCHAR" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EMAIL" sqlType="VARCHAR" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="COUNTRY" sqlType="VARCHAR" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="IPADDRESS" sqlType="VARCHAR" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="CONSTRAINT_8" columns="ID"/>
+    </table>
   </data-source>
 </component>
