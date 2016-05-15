@@ -56,17 +56,17 @@ public class ServiceTests {
      */
 
     @Test
-    public void whenSelectPeoplethenReturnsPersonArraylist() throws SQLException, IOException {
+    public void whenSelectPeopleThenReturnsPersonArraylist() throws SQLException, IOException {
 
         //arrange
         service.initDatabase();
 
         //act
         service.populateDatabase();
-        ArrayList<Person> testPeople = service.selectPeople();
+        ArrayList<Person> testPeople = service.selectPeople(1);
 
         //assert
-        assertThat(testPeople.size(), is(1000));
+        assertThat(testPeople.size(), is(20));
     }
 
     @After
